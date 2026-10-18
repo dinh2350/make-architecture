@@ -1,0 +1,142 @@
+{
+ "schema_version": 1,
+ "diagram_type": "architecture",
+ "meta": {
+  "title": "Platform Routing and SSL",
+  "subtitle": "Right backend for each device",
+  "output": "1-routing.html",
+  "quality_profile": "showcase",
+  "animation": "trace",
+  "viewBox": [
+   400,
+   711
+  ]
+ },
+ "components": [
+  {
+   "id": "mobile",
+   "type": "external",
+   "label": "Mobile Users",
+   "sublabel": "iOS / Android app",
+   "pos": [
+    20,
+    60
+   ],
+   "size": [
+    170,
+    100
+   ],
+   "tile": true,
+   "note": "Traffic from the native mobile app."
+  },
+  {
+   "id": "desktop",
+   "type": "external",
+   "label": "Desktop Users",
+   "sublabel": "Web browser",
+   "pos": [
+    210,
+    60
+   ],
+   "size": [
+    170,
+    100
+   ],
+   "tile": true,
+   "note": "Traffic from the desktop web app."
+  },
+  {
+   "id": "lb",
+   "type": "cloud",
+   "label": "Load Balancer",
+   "sublabel": "Layer 7 · HTTPS :443",
+   "pos": [
+    90,
+    290
+   ],
+   "size": [
+    220,
+    110
+   ],
+   "tile": true,
+   "note": "Terminates inbound HTTPS, routes each request by platform, skips unhealthy instances and keeps returning users on the same server.",
+   "tag": "SSL Termination"
+  },
+  {
+   "id": "mobile-pool",
+   "type": "backend",
+   "label": "Mobile Pool",
+   "sublabel": "light API payloads",
+   "pos": [
+    20,
+    540
+   ],
+   "size": [
+    170,
+    100
+   ],
+   "tile": true,
+   "note": "Backend pool tuned for mobile API traffic."
+  },
+  {
+   "id": "web-pool",
+   "type": "backend",
+   "label": "Web Pool",
+   "sublabel": "full-page responses",
+   "pos": [
+    210,
+    540
+   ],
+   "size": [
+    170,
+    100
+   ],
+   "tile": true,
+   "note": "Backend pool that renders full web pages for desktop."
+  }
+ ],
+ "connections": [
+  {
+   "id": "m-lb",
+   "from": "mobile",
+   "to": "lb",
+   "label": "HTTPS",
+   "variant": "security"
+  },
+  {
+   "id": "d-lb",
+   "from": "desktop",
+   "to": "lb",
+   "label": "HTTPS",
+   "variant": "security"
+  },
+  {
+   "id": "lb-mp",
+   "from": "lb",
+   "to": "mobile-pool",
+   "label": "mobile API"
+  },
+  {
+   "id": "lb-wp",
+   "from": "lb",
+   "to": "web-pool",
+   "label": "full pages"
+  }
+ ],
+ "cards": [
+  {
+   "dot": "violet",
+   "title": "Platform-specific routing",
+   "items": [
+    "Mobile and desktop requests go to specialized pools, so each device gets a tailored response."
+   ]
+  },
+  {
+   "dot": "rose",
+   "title": "SSL termination",
+   "items": [
+    "The load balancer decrypts HTTPS once, offloading TLS work from backend instances."
+   ]
+  }
+ ]
+}

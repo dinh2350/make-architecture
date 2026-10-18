@@ -137,9 +137,9 @@ test('sequence message labels match their line color and lifelines stop above th
   assert.equal(result.status, 0, result.stderr || result.stdout);
   const html = fs.readFileSync(output, 'utf8');
   variants.forEach((variant, index) => {
-    // Colored lines share their color with the label; gray lines keep the
-    // readable muted text color.
-    const expected = ['default', 'return'].includes(variant) ? 't-muted' : `t-edge-${variant}`;
+    // Colored lines share their color with the label; gray lines use the
+    // primary text color in showcase, since muted gray was hard to read.
+    const expected = ['default', 'return'].includes(variant) ? 't-primary' : `t-edge-${variant}`;
     assert.equal(classForLabel(html, `message-${variant}`, `M${index}`), expected, variant);
   });
   const legendTitle = Number(html.match(/<text x="[\d.]+" y="([\d.]+)"[^>]*>Legend<\/text>/)[1]);

@@ -60,6 +60,12 @@
     { "id": "sentry", "category": "engineering", "simpleIcon": "sentry", "domains": ["sentry.io"] },
     { "id": "datadog", "category": "engineering", "simpleIcon": "datadog", "domains": ["datadoghq.com"] },
     { "id": "pagerduty", "category": "engineering", "simpleIcon": "pagerduty", "aliases": ["pager-duty"], "domains": ["pagerduty.com"] },
+    { "id": "kong", "category": "engineering", "simpleIcon": "kong", "domains": ["konghq.com"] },
+    { "id": "nginx", "category": "engineering", "simpleIcon": "nginx", "domains": ["nginx.com"] },
+    { "id": "graphql", "category": "engineering", "simpleIcon": "graphql", "domains": ["graphql.org"] },
+    { "id": "swagger", "category": "engineering", "simpleIcon": "swagger", "domains": ["swagger.io"] },
+    { "id": "postman", "category": "engineering", "simpleIcon": "postman", "domains": ["postman.com"] },
+    { "id": "openapi", "category": "engineering", "simpleIcon": "openapiinitiative", "aliases": ["openapi-initiative", "openapi-spec"], "domains": ["openapis.org"] },
 
     { "id": "postgresql", "category": "data", "simpleIcon": "postgresql", "aliases": ["postgres"], "domains": ["postgresql.org"] },
     { "id": "mysql", "category": "data", "simpleIcon": "mysql", "domains": ["mysql.com"] },

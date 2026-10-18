@@ -100,14 +100,46 @@ export const SEMANTIC_SIGIL_FOOTPRINT = SEMANTIC_SIGIL_INSET + SEMANTIC_SIGIL_SI
 // so labels never sit under the badge.
 export const SOURCE_BADGE_FOOTPRINT = 38;
 
-export function renderSemanticSigil(kind, { x, y, size = SEMANTIC_SIGIL_SIZE, icon } = {}) {
+// Default node presentation: the semantic sigil is large and centered in the
+// box's upper region, with the label(s) stacked below it. Reserved for a
+// brand-less node — every renderer's brand contract keeps the small corner
+// sigil and small corner brand badge sharing one top rail instead (see
+// renderers/shared/brand-marks.mjs). A node whose box is too short for the
+// stacked layout falls back to the small corner sigil (`renderSemanticSigil`
+// default size) instead of failing validation.
+export const STACKED_SIGIL_SIZE = 38;
+export const STACKED_SIGIL_TOP_PAD = 10;
+export const STACKED_SIGIL_LABEL_GAP = 10;
+
+/** Minimum node height the icon-above-label stacked sigil layout needs for
+ * its icon, label, and (if present) sublabel at a legible minimum font size. */
+export function stackedSigilMinimumHeight(hasSub, minimumFontSize) {
+  const labelBaseline = STACKED_SIGIL_TOP_PAD + STACKED_SIGIL_SIZE + STACKED_SIGIL_LABEL_GAP;
+  return labelBaseline + minimumFontSize + (hasSub ? 16 : 6);
+}
+
+/** Whether a box is tall enough to use the stacked icon-above-label layout.
+ * Too-short boxes silently fall back to the small corner sigil instead of
+ * failing validation — the stacked layout stays a presentation default, not
+ * a hard geometry requirement the author must satisfy. */
+export function stackedSigilFits(height, hasSub, minimumFontSize) {
+  return height >= stackedSigilMinimumHeight(hasSub, minimumFontSize);
+}
+
+export function renderSemanticSigil(kind, { x, y, size = SEMANTIC_SIGIL_SIZE, icon, large = false, bold = false, strong = false } = {}) {
   if (icon === 'none') return '';
   const selected = icon ?? kind;
   const normalized = Object.hasOwn(SIGIL_SHAPE, selected) ? selected : 'neutral';
   const tone = SIGIL_TONE[kind] || 'external';
   const scale = size / 16;
-  return `<g aria-hidden="true" data-semantic-sigil="${esc(normalized)}" class="semantic-sigil s-${tone}" transform="translate(${x} ${y}) scale(${scale})">
-            ${SIGIL_SHAPE[normalized]}
+  // `large` marks the big centered sigil in a tile (architecture) or stacked
+  // (sequence) node: a bolder stroke and full opacity so it reads as the
+  // node's focal point, versus the quieter small corner stamp used
+  // everywhere else. Same shapes and tone colors either way.
+  const sizeClass = large ? ` semantic-sigil-large${bold ? ' semantic-sigil-bold' : ''}${strong ? ' semantic-sigil-strong' : ''}` : '';
+  const plate = large && strong ? '<rect x="-1.5" y="-1.5" width="19" height="19" rx="5" class="semantic-sigil-plate"/>\n            ' : '';
+  return `<g aria-hidden="true" data-semantic-sigil="${esc(normalized)}" class="semantic-sigil${sizeClass} s-${tone}" transform="translate(${x} ${y}) scale(${scale})">
+            ${plate}${SIGIL_SHAPE[normalized]}
           </g>`;
 }
 

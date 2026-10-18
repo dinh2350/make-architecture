@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "diagram_type": "sequence",
+  "meta": {
+    "title": "WebSocket (Full-Duplex)",
+    "output": "examples/websocket-fullduplex.html",
+    "viewBox": [
+      1260,
+      792
+    ],
+    "animation": "trace",
+    "quality_profile": "showcase",
+    "node_icon_layout": "stacked"
+  },
+  "participants": [
+    {
+      "id": "browser",
+      "type": "frontend",
+      "label": "Browser"
+    },
+    {
+      "id": "server",
+      "type": "backend",
+      "label": "Server"
+    }
+  ],
+  "messages": [
+    {
+      "id": "open",
+      "from": "browser",
+      "to": "server",
+      "y": 222,
+      "label": "upgrade: websocket",
+      "variant": "emphasis"
+    },
+    {
+      "id": "ack",
+      "from": "server",
+      "to": "browser",
+      "y": 260,
+      "label": "101 switching protocols",
+      "variant": "return"
+    },
+    {
+      "id": "msg-1",
+      "from": "browser",
+      "to": "server",
+      "y": 322,
+      "label": "message",
+      "variant": "default"
+    },
+    {
+      "id": "msg-2",
+      "from": "server",
+      "to": "browser",
+      "y": 364,
+      "label": "message",
+      "variant": "default"
+    },
+    {
+      "id": "msg-3",
+      "from": "browser",
+      "to": "server",
+      "y": 426,
+      "label": "message",
+      "variant": "default"
+    },
+    {
+      "id": "msg-4",
+      "from": "server",
+      "to": "browser",
+      "y": 468,
+      "label": "message",
+      "variant": "default"
+    },
+    {
+      "id": "msg-5",
+      "from": "browser",
+      "to": "server",
+      "y": 530,
+      "label": "message",
+      "variant": "default"
+    },
+    {
+      "id": "msg-6",
+      "from": "server",
+      "to": "browser",
+      "y": 572,
+      "label": "message",
+      "variant": "default"
+    },
+    {
+      "id": "msg-7",
+      "from": "browser",
+      "to": "server",
+      "y": 634,
+      "label": "message",
+      "variant": "default"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "orange",
+      "title": "WebSocket",
+      "items": [
+        "One upgraded connection stays open for the session",
+        "Either side sends at any time, in any order",
+        "Fully duplex with the lowest latency for two-way traffic"
+      ]
+    }
+  ]
+}

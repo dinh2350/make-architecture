@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "ab1cae69-0460-4b64-97cc-0ff69fc7a30f",
+  "status": "current",
+  "command": "deliver",
+  "type": "sequence",
+  "input": "/Users/devinnguyen/Documents/project/archify/.archify/sequence-short-polling-20260930-010554/candidate.json",
+  "output": "/Users/devinnguyen/Documents/project/archify/.archify/sequence-short-polling-20260930-010554/short-polling.html",
+  "specification": {
+    "sha256": "874aa42acf324298722eb71ea9d6e198ea643782650566102ff0bc686e9c3ac4",
+    "bytes": 1743
+  },
+  "artifact": {
+    "sha256": "8a35c9b9720f874c218e439185470fe3f5e1b748b19be9e0e3cc4e49f32d68e3",
+    "bytes": 765116
+  }
+}

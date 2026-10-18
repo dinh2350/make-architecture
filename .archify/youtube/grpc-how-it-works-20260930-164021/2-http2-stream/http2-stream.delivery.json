@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "112610f1-042c-479f-90b7-705a9de9d947",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/Users/devinnguyen/Documents/project/archify/.archify/youtube/grpc-how-it-works-20260930-164021/2-http2-stream/candidate.json",
+  "output": "/Users/devinnguyen/Documents/project/archify/.archify/youtube/grpc-how-it-works-20260930-164021/2-http2-stream/http2-stream.html",
+  "specification": {
+    "sha256": "e48d6ddb108876b091e43a60d6ed37a4401d6a57e7628d6cf454c92004cd6db0",
+    "bytes": 2849
+  },
+  "artifact": {
+    "sha256": "2e89aa9eb5372a339d7b7a5f22f102c6f35cdd85effd008c98cf6d74b8768f4d",
+    "bytes": 770021
+  }
+}

@@ -1,0 +1,383 @@
+{
+  "outputWidth": 1280,
+  "outputHeight": 720,
+  "duration": 60600,
+  "reveal": {
+    "nodeDuration": 0.4,
+    "edgeDuration": 0.5,
+    "nodes": {
+      "public-api": {
+        "at": 5,
+        "duration": 0.4
+      },
+      "private-api": {
+        "at": 5.15,
+        "duration": 0.4
+      },
+      "partner-api": {
+        "at": 5.3,
+        "duration": 0.4
+      },
+      "http-hub": {
+        "at": 10,
+        "duration": 0.4
+      },
+      "http-versions": {
+        "at": 10.9,
+        "duration": 0.4
+      },
+      "http-methods": {
+        "at": 11.05,
+        "duration": 0.4
+      },
+      "http-status": {
+        "at": 11.2,
+        "duration": 0.4
+      },
+      "http-headers": {
+        "at": 11.35,
+        "duration": 0.4
+      },
+      "cookies": {
+        "at": 11.9,
+        "duration": 0.4
+      },
+      "caching": {
+        "at": 12.05,
+        "duration": 0.4
+      },
+      "rest": {
+        "at": 15,
+        "duration": 0.4
+      },
+      "graphql": {
+        "at": 15.15,
+        "duration": 0.4
+      },
+      "grpc": {
+        "at": 15.3,
+        "duration": 0.4
+      },
+      "soap": {
+        "at": 15.45,
+        "duration": 0.4
+      },
+      "websocket": {
+        "at": 15.6,
+        "duration": 0.4
+      },
+      "basic-auth": {
+        "at": 20,
+        "duration": 0.4
+      },
+      "token-auth": {
+        "at": 20.15,
+        "duration": 0.4
+      },
+      "jwt": {
+        "at": 20.3,
+        "duration": 0.4
+      },
+      "oauth": {
+        "at": 20.45,
+        "duration": 0.4
+      },
+      "session-auth": {
+        "at": 20.6,
+        "duration": 0.4
+      },
+      "swagger": {
+        "at": 25,
+        "duration": 0.4
+      },
+      "postman": {
+        "at": 25.15,
+        "duration": 0.4
+      },
+      "openapi": {
+        "at": 25.3,
+        "duration": 0.4
+      },
+      "redoc": {
+        "at": 25.45,
+        "duration": 0.4
+      },
+      "dapperdox": {
+        "at": 25.6,
+        "duration": 0.4
+      },
+      "pagination": {
+        "at": 30,
+        "duration": 0.4
+      },
+      "params": {
+        "at": 30.15,
+        "duration": 0.4
+      },
+      "idempotency": {
+        "at": 30.3,
+        "duration": 0.4
+      },
+      "versioning": {
+        "at": 30.45,
+        "duration": 0.4
+      },
+      "hateoas": {
+        "at": 30.6,
+        "duration": 0.4
+      },
+      "content-negotiation": {
+        "at": 30.75,
+        "duration": 0.4
+      },
+      "perf-caching": {
+        "at": 35,
+        "duration": 0.4
+      },
+      "rate-limiting": {
+        "at": 35.15,
+        "duration": 0.4
+      },
+      "load-balancing": {
+        "at": 35.3,
+        "duration": 0.4
+      },
+      "perf-pagination": {
+        "at": 35.45,
+        "duration": 0.4
+      },
+      "indexing": {
+        "at": 35.6,
+        "duration": 0.4
+      },
+      "scaling": {
+        "at": 35.75,
+        "duration": 0.4
+      },
+      "perf-testing": {
+        "at": 35.9,
+        "duration": 0.4
+      },
+      "aws-gateway": {
+        "at": 40,
+        "duration": 0.4
+      },
+      "kong": {
+        "at": 40.15,
+        "duration": 0.4
+      },
+      "azure-api": {
+        "at": 40.3,
+        "duration": 0.4
+      },
+      "apigee": {
+        "at": 40.45,
+        "duration": 0.4
+      },
+      "nginx": {
+        "at": 40.6,
+        "duration": 0.4
+      },
+      "flask": {
+        "at": 45,
+        "duration": 0.4
+      },
+      "nodejs": {
+        "at": 45.15,
+        "duration": 0.4
+      },
+      "django": {
+        "at": 45.3,
+        "duration": 0.4
+      },
+      "spring": {
+        "at": 45.45,
+        "duration": 0.4
+      },
+      "fastapi": {
+        "at": 45.6,
+        "duration": 0.4
+      },
+      "sync-async": {
+        "at": 50,
+        "duration": 0.4
+      },
+      "api-gateway-pattern": {
+        "at": 50.15,
+        "duration": 0.4
+      },
+      "microservices": {
+        "at": 50.3,
+        "duration": 0.4
+      },
+      "webhooks": {
+        "at": 50.45,
+        "duration": 0.4
+      },
+      "polling": {
+        "at": 50.6,
+        "duration": 0.4
+      },
+      "batch-processing": {
+        "at": 50.75,
+        "duration": 0.4
+      },
+      "message-queue": {
+        "at": 50.9,
+        "duration": 0.4
+      },
+      "road-bar": {
+        "at": 0,
+        "duration": 0.3
+      },
+      "road-mascot-top": {
+        "at": 0,
+        "duration": 0.3
+      },
+      "road-mascot-bottom": {
+        "at": 50,
+        "duration": 0.5
+      }
+    },
+    "edges": {
+      "http-hub-to-http-versions": {
+        "at": 10.4,
+        "duration": 0.5
+      },
+      "http-hub-to-http-methods": {
+        "at": 10.55,
+        "duration": 0.5
+      },
+      "http-hub-to-http-status": {
+        "at": 10.7,
+        "duration": 0.5
+      },
+      "http-hub-to-http-headers": {
+        "at": 10.85,
+        "duration": 0.5
+      }
+    }
+  },
+  "camera": [
+    {
+      "holdFrom": 0,
+      "holdTo": 4.6,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 1060,
+        "height": 1843
+      }
+    },
+    {
+      "holdFrom": 5,
+      "holdTo": 9.6,
+      "rect": {
+        "x": 16,
+        "y": 20,
+        "width": 492,
+        "height": 212
+      }
+    },
+    {
+      "holdFrom": 10,
+      "holdTo": 14.6,
+      "rect": {
+        "x": 536,
+        "y": 20,
+        "width": 492,
+        "height": 419
+      }
+    },
+    {
+      "holdFrom": 15,
+      "holdTo": 19.6,
+      "rect": {
+        "x": 16,
+        "y": 214,
+        "width": 492,
+        "height": 332
+      }
+    },
+    {
+      "holdFrom": 20,
+      "holdTo": 24.6,
+      "rect": {
+        "x": 536,
+        "y": 421,
+        "width": 492,
+        "height": 332
+      }
+    },
+    {
+      "holdFrom": 25,
+      "holdTo": 29.6,
+      "rect": {
+        "x": 16,
+        "y": 528,
+        "width": 492,
+        "height": 332
+      }
+    },
+    {
+      "holdFrom": 30,
+      "holdTo": 34.6,
+      "rect": {
+        "x": 536,
+        "y": 735,
+        "width": 492,
+        "height": 228
+      }
+    },
+    {
+      "holdFrom": 35,
+      "holdTo": 39.6,
+      "rect": {
+        "x": 16,
+        "y": 842,
+        "width": 492,
+        "height": 452
+      }
+    },
+    {
+      "holdFrom": 40,
+      "holdTo": 44.6,
+      "rect": {
+        "x": 536,
+        "y": 945,
+        "width": 492,
+        "height": 332
+      }
+    },
+    {
+      "holdFrom": 45,
+      "holdTo": 49.6,
+      "rect": {
+        "x": 16,
+        "y": 1276,
+        "width": 492,
+        "height": 332
+      }
+    },
+    {
+      "holdFrom": 50,
+      "holdTo": 54.6,
+      "rect": {
+        "x": 536,
+        "y": 1259,
+        "width": 492,
+        "height": 452
+      }
+    },
+    {
+      "holdFrom": 55,
+      "holdTo": 60,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 1060,
+        "height": 1843
+      }
+    }
+  ]
+}

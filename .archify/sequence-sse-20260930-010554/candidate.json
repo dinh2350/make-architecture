@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "diagram_type": "sequence",
+  "meta": {
+    "title": "SSE (server-sent events)",
+    "output": "sse.html",
+    "viewBox": [
+      1200,
+      760
+    ],
+    "animation": "trace",
+    "quality_profile": "showcase",
+    "column_fit": "spread",
+    "node_icon_layout": "stacked"
+  },
+  "participants": [
+    {
+      "id": "browser",
+      "type": "frontend",
+      "label": "Browser"
+    },
+    {
+      "id": "server",
+      "type": "backend",
+      "label": "Server"
+    }
+  ],
+  "messages": [
+    {
+      "id": "req-1",
+      "from": "browser",
+      "to": "server",
+      "y": 210,
+      "label": "GET /stream (EventSource)",
+      "variant": "emphasis"
+    },
+    {
+      "id": "ev-1",
+      "from": "server",
+      "to": "browser",
+      "y": 290,
+      "label": "event",
+      "variant": "default"
+    },
+    {
+      "id": "ev-2",
+      "from": "server",
+      "to": "browser",
+      "y": 370,
+      "label": "event",
+      "variant": "default"
+    },
+    {
+      "id": "ev-3",
+      "from": "server",
+      "to": "browser",
+      "y": 450,
+      "label": "event",
+      "variant": "default"
+    },
+    {
+      "id": "ev-4",
+      "from": "server",
+      "to": "browser",
+      "y": 530,
+      "label": "event",
+      "variant": "default"
+    },
+    {
+      "id": "ev-5",
+      "from": "server",
+      "to": "browser",
+      "y": 610,
+      "label": "event",
+      "variant": "default"
+    }
+  ]
+}

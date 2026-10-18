@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "diagram_type": "sequence",
+  "meta": {
+    "title": "SSE (Server-Sent Events)",
+    "output": "examples/sse-unidirectional.html",
+    "viewBox": [
+      1090,
+      692
+    ],
+    "animation": "trace",
+    "quality_profile": "showcase",
+    "column_fit": "spread",
+    "node_icon_layout": "stacked"
+  },
+  "participants": [
+    {
+      "id": "browser",
+      "type": "frontend",
+      "label": "Browser"
+    },
+    {
+      "id": "server",
+      "type": "backend",
+      "label": "Server"
+    }
+  ],
+  "messages": [
+    {
+      "id": "open",
+      "from": "browser",
+      "to": "server",
+      "y": 222,
+      "label": "GET (accept: text/event-stream)",
+      "variant": "emphasis"
+    },
+    {
+      "id": "evt-1",
+      "from": "server",
+      "to": "browser",
+      "y": 282,
+      "label": "event",
+      "variant": "default"
+    },
+    {
+      "id": "evt-2",
+      "from": "server",
+      "to": "browser",
+      "y": 344,
+      "label": "event",
+      "variant": "default"
+    },
+    {
+      "id": "evt-3",
+      "from": "server",
+      "to": "browser",
+      "y": 406,
+      "label": "event",
+      "variant": "default"
+    },
+    {
+      "id": "evt-4",
+      "from": "server",
+      "to": "browser",
+      "y": 468,
+      "label": "event",
+      "variant": "default"
+    },
+    {
+      "id": "evt-5",
+      "from": "server",
+      "to": "browser",
+      "y": 530,
+      "label": "event",
+      "variant": "default"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "rose",
+      "title": "SSE",
+      "items": [
+        "One long-lived HTTP connection",
+        "Only the server pushes events; the browser never replies on this channel",
+        "Simpler than WebSocket when the browser never needs to send"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Bước 12-14: trả về, và HTTP 200 khi lỗi",
+    "output": ".archify/youtube/grpc-how-it-works-20260930-164021/4-reply-status/reply-status.html",
+    "quality_profile": "showcase",
+    "animation": "trace",
+    "viewBox": [
+      1200,
+      760
+    ],
+    "legend": {
+      "mode": "hidden"
+    }
+  },
+  "components": [
+    {
+      "id": "transport",
+      "type": "cloud",
+      "label": "HTTP/2",
+      "pos": [
+        80,
+        140
+      ],
+      "size": [
+        200,
+        100
+      ],
+      "tile": true
+    },
+    {
+      "id": "order",
+      "type": "backend",
+      "label": "Order service",
+      "pos": [
+        480,
+        140
+      ],
+      "size": [
+        200,
+        100
+      ],
+      "tile": true,
+      "sublabel": "decode"
+    },
+    {
+      "id": "client",
+      "type": "frontend",
+      "label": "Client",
+      "pos": [
+        880,
+        140
+      ],
+      "size": [
+        200,
+        100
+      ],
+      "tile": true
+    },
+    {
+      "id": "s200",
+      "type": "external",
+      "label": "HTTP 200",
+      "pos": [
+        80,
+        470
+      ],
+      "size": [
+        200,
+        100
+      ],
+      "tile": true,
+      "sublabel": "even if the call fails"
+    },
+    {
+      "id": "gstat",
+      "type": "external",
+      "label": "grpc-status",
+      "pos": [
+        480,
+        470
+      ],
+      "size": [
+        200,
+        100
+      ],
+      "tile": true,
+      "sublabel": "trailer · real result"
+    }
+  ],
+  "connections": [
+    {
+      "id": "e-dec",
+      "from": "transport",
+      "to": "order",
+      "label": "bytes",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e-rest",
+      "from": "order",
+      "to": "client",
+      "label": "REST response",
+      "fromSide": "right",
+      "toSide": "left"
+    },
+    {
+      "id": "e-st",
+      "from": "transport",
+      "to": "s200",
+      "label": "status",
+      "fromSide": "bottom",
+      "toSide": "top"
+    },
+    {
+      "id": "e-tr",
+      "from": "s200",
+      "to": "gstat",
+      "label": "trailer",
+      "fromSide": "right",
+      "toSide": "left",
+      "variant": "emphasis"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "e47b3f42-7c20-4302-9548-61ef92ea227a",
+  "status": "current",
+  "command": "deliver",
+  "type": "lifecycle",
+  "input": "/Users/devinnguyen/Documents/project/archify/.archify/lifecycle-status-code-fates-20260930-134405/candidate.json",
+  "output": "/Users/devinnguyen/Documents/project/archify/.archify/lifecycle-status-code-fates-20260930-134405/fates.html",
+  "specification": {
+    "sha256": "88fffc992d540a4f8af59a6124e5ebbf28e80a6c77bf35e616a61a415f683142",
+    "bytes": 1838
+  },
+  "artifact": {
+    "sha256": "521f4d488dc4b2b50f58452e758378e3d4345611c043e4d88090297e33da4280",
+    "bytes": 774040
+  }
+}

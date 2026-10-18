@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "diagram_type": "sequence",
+  "meta": {
+    "title": "Long polling",
+    "output": "long-polling.html",
+    "viewBox": [
+      1200,
+      760
+    ],
+    "animation": "trace",
+    "quality_profile": "showcase",
+    "column_fit": "spread",
+    "node_icon_layout": "stacked"
+  },
+  "participants": [
+    {
+      "id": "browser",
+      "type": "frontend",
+      "label": "Browser"
+    },
+    {
+      "id": "server",
+      "type": "backend",
+      "label": "Server"
+    }
+  ],
+  "messages": [
+    {
+      "id": "req-1",
+      "from": "browser",
+      "to": "server",
+      "y": 200,
+      "label": "request (held open)",
+      "variant": "default"
+    },
+    {
+      "id": "res-1",
+      "from": "server",
+      "to": "browser",
+      "y": 350,
+      "label": "new data",
+      "variant": "emphasis"
+    },
+    {
+      "id": "req-2",
+      "from": "browser",
+      "to": "server",
+      "y": 395,
+      "label": "next request, immediately",
+      "variant": "default"
+    },
+    {
+      "id": "res-2",
+      "from": "server",
+      "to": "browser",
+      "y": 545,
+      "label": "new data",
+      "variant": "emphasis"
+    },
+    {
+      "id": "req-3",
+      "from": "browser",
+      "to": "server",
+      "y": 590,
+      "label": "new request",
+      "variant": "default"
+    }
+  ]
+}

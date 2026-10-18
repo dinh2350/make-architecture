@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "94f75ef5-2243-4a5c-9bee-502b122fb32d",
+  "status": "current",
+  "command": "deliver",
+  "type": "sequence",
+  "input": "/Users/devinnguyen/Documents/project/archify/.archify/sequence-long-polling-20260930-010554/candidate.json",
+  "output": "/Users/devinnguyen/Documents/project/archify/.archify/sequence-long-polling-20260930-010554/long-polling.html",
+  "specification": {
+    "sha256": "a8c5d0f2c87943f320de8486b6357b346b3c24b90a9f487c486ae904fc757b7a",
+    "bytes": 1309
+  },
+  "artifact": {
+    "sha256": "f404c8f886ddddcce2f199a130297949469a0b91d80994ff968691b7e3ac42f4",
+    "bytes": 762736
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "dbd2a643-5559-4760-b7ef-40e498d0c7f5",
+  "status": "current",
+  "command": "deliver",
+  "type": "sequence",
+  "input": "/Users/devinnguyen/Documents/project/archify/.archify/sequence-sse-20260930-010554/candidate.json",
+  "output": "/Users/devinnguyen/Documents/project/archify/.archify/sequence-sse-20260930-010554/sse.html",
+  "specification": {
+    "sha256": "4a58c487148210946ccfc185673a2f08bc7352f3a898d4f5d3e5e5451b39e43b",
+    "bytes": 1428
+  },
+  "artifact": {
+    "sha256": "79603a6e93264d6d1e787cb4eb2def68f87b45517f47585e7846e8ef9eaef944",
+    "bytes": 763340
+  }
+}

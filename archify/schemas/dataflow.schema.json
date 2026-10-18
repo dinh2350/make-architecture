@@ -142,6 +142,7 @@
           "tag": {
             "type": "string"
           },
+          "note": { "$ref": "common.schema.json#/$defs/nodeNote" },
           "icon": { "$ref": "common.schema.json#/$defs/nodeIcon" },
           "brand": {
             "$ref": "common.schema.json#/$defs/brandMark"

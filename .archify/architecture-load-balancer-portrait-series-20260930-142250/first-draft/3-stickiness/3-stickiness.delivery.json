@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "8f383d38-b4da-4fed-82ee-5de20797c6a1",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/Users/devinnguyen/Documents/project/archify/.archify/architecture-load-balancer-portrait-series-20260930-142152/3-stickiness/candidate.json",
+  "output": "/Users/devinnguyen/Documents/project/archify/.archify/architecture-load-balancer-portrait-series-20260930-142152/3-stickiness/3-stickiness.html",
+  "specification": {
+    "sha256": "0059791a0f2f6a77dac36b47d30f2116e4d556fec0c72962a6e579e717c241c0",
+    "bytes": 2569
+  },
+  "artifact": {
+    "sha256": "96a1154a6a28d6da6fcc3cda2f31d2bdb510366115168ef6db75020304b77c90",
+    "bytes": 768322
+  }
+}

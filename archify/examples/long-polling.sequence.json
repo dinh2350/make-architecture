@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "diagram_type": "sequence",
+  "meta": {
+    "title": "Long Polling",
+    "output": "examples/long-polling.html",
+    "viewBox": [
+      1050,
+      652
+    ],
+    "animation": "trace",
+    "quality_profile": "showcase",
+    "node_icon_layout": "stacked"
+  },
+  "participants": [
+    {
+      "id": "browser",
+      "type": "frontend",
+      "label": "Browser"
+    },
+    {
+      "id": "server",
+      "type": "backend",
+      "label": "Server"
+    }
+  ],
+  "messages": [
+    {
+      "id": "req-1",
+      "from": "browser",
+      "to": "server",
+      "y": 222,
+      "label": "request (hold open)",
+      "variant": "default"
+    },
+    {
+      "id": "wait-1",
+      "from": "server",
+      "to": "browser",
+      "y": 264,
+      "label": "held while waiting",
+      "variant": "dashed"
+    },
+    {
+      "id": "res-1",
+      "from": "server",
+      "to": "browser",
+      "y": 302,
+      "label": "response when ready",
+      "variant": "emphasis"
+    },
+    {
+      "id": "req-2",
+      "from": "browser",
+      "to": "server",
+      "y": 372,
+      "label": "re-request (hold open)",
+      "variant": "default"
+    },
+    {
+      "id": "wait-2",
+      "from": "server",
+      "to": "browser",
+      "y": 414,
+      "label": "held while waiting",
+      "variant": "dashed"
+    },
+    {
+      "id": "res-2",
+      "from": "server",
+      "to": "browser",
+      "y": 452,
+      "label": "response when ready",
+      "variant": "emphasis"
+    },
+    {
+      "id": "req-3",
+      "from": "browser",
+      "to": "server",
+      "y": 512,
+      "label": "re-request (hold open)",
+      "variant": "default"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Long polling",
+      "items": [
+        "Server holds the request open until data is ready",
+        "Browser immediately re-requests after each response",
+        "Fewer wasted round trips than short polling, but each connection stays open longer"
+      ]
+    }
+  ]
+}

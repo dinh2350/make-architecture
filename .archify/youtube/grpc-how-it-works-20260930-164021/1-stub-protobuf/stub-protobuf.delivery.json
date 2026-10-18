@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "b5855615-ec12-4de4-a583-0ddb95856de9",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/Users/devinnguyen/Documents/project/archify/.archify/youtube/grpc-how-it-works-20260930-164021/1-stub-protobuf/candidate.json",
+  "output": "/Users/devinnguyen/Documents/project/archify/.archify/youtube/grpc-how-it-works-20260930-164021/1-stub-protobuf/stub-protobuf.html",
+  "specification": {
+    "sha256": "d43ea8ed36d6e8dafea359e3705f135e35223149e521b10d33a27766e94e9abb",
+    "bytes": 2261
+  },
+  "artifact": {
+    "sha256": "24c6ef734958caa83b729e99068596b48eb2e5c8624c8ab25b2b34c2d4cc5db1",
+    "bytes": 766303
+  }
+}

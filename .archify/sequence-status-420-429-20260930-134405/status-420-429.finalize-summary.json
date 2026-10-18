@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "ok": false,
+  "command": "finalize",
+  "status": "fail",
+  "type": "sequence",
+  "quality": "showcase",
+  "specification": {
+    "path": "/Users/devinnguyen/Documents/project/archify/.archify/sequence-status-420-429-20260930-134405/candidate.json",
+    "sha256": "a766be3c18ca31816f04707e067850b9533c440fdd56a37799756dc0bc47a068",
+    "bytes": 1215
+  },
+  "artifact": {
+    "path": "/Users/devinnguyen/Documents/project/archify/.archify/sequence-status-420-429-20260930-134405/status-420-429.html",
+    "sha256": "84645bd1ca818cd40e91b711867c98c2e8879cad6844c81fea771866367fe525",
+    "bytes": 762612
+  },
+  "gates": {
+    "validate": "pass",
+    "deliver": "pass",
+    "check": "pass",
+    "browser-check": "fail"
+  },
+  "failedStage": "browser-check",
+  "diagnostics": [
+    {
+      "code": "viewer/evidence-path-conflict",
+      "severity": "error",
+      "message": "browser-check will not replace the existing unowned evidence path \"/Users/devinnguyen/Documents/project/archify/.archify/sequence-status-420-429-20260930-134405/status-420-429.browser-check.json\".",
+      "subject": {
+        "artifact": "/Users/devinnguyen/Documents/project/archify/.archify/sequence-status-420-429-20260930-134405/status-420-429.html",
+        "evidencePath": "/Users/devinnguyen/Documents/project/archify/.archify/sequence-status-420-429-20260930-134405/status-420-429.browser-check.json"
+      },
+      "evidence": {
+        "reason": {
+          "code": "ownership-artifact-mismatch"
+        }
+      },
+      "supportedFixes": [
+        "move the conflicting file aside, or choose a separate --out-dir, then rerun browser-check"
+      ]
+    }
+  ],
+  "diagnosticSummary": {
+    "total": 1,
+    "shown": 1,
+    "truncated": false
+  },
+  "evidence": {
+    "receipt": "/Users/devinnguyen/Documents/project/archify/.archify/sequence-status-420-429-20260930-134405/status-420-429.finalize.json",
+    "summaryReceipt": "/Users/devinnguyen/Documents/project/archify/.archify/sequence-status-420-429-20260930-134405/status-420-429.finalize-summary.json",
+    "browserCheckReceipt": "/Users/devinnguyen/Documents/project/archify/.archify/sequence-status-420-429-20260930-134405/status-420-429.browser-check.json"
+  },
+  "update": {
+    "status": "current",
+    "installedVersion": "3.0.1",
+    "availableVersion": "3.0.1",
+    "releaseNotes": null,
+    "checkedAt": "2026-09-29T08:34:43.428Z",
+    "source": "cache",
+    "noticeRequired": false,
+    "noticeText": null
+  },
+  "visualReview": "not-requested",
+  "durationMs": 391
+}

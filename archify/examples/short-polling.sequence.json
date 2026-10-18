@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "diagram_type": "sequence",
+  "meta": {
+    "title": "Short Polling",
+    "output": "examples/short-polling.html",
+    "viewBox": [
+      940,
+      592
+    ],
+    "animation": "trace",
+    "quality_profile": "showcase",
+    "node_icon_layout": "stacked"
+  },
+  "participants": [
+    {
+      "id": "browser",
+      "type": "frontend",
+      "label": "Browser"
+    },
+    {
+      "id": "server",
+      "type": "backend",
+      "label": "Server"
+    }
+  ],
+  "messages": [
+    {
+      "id": "req-1",
+      "from": "browser",
+      "to": "server",
+      "y": 222,
+      "label": "request",
+      "variant": "default"
+    },
+    {
+      "id": "res-1",
+      "from": "server",
+      "to": "browser",
+      "y": 258,
+      "label": "no update yet",
+      "variant": "return"
+    },
+    {
+      "id": "req-2",
+      "from": "browser",
+      "to": "server",
+      "y": 322,
+      "label": "request",
+      "variant": "default"
+    },
+    {
+      "id": "res-2",
+      "from": "server",
+      "to": "browser",
+      "y": 358,
+      "label": "no update yet",
+      "variant": "return"
+    },
+    {
+      "id": "req-3",
+      "from": "browser",
+      "to": "server",
+      "y": 422,
+      "label": "request",
+      "variant": "default"
+    },
+    {
+      "id": "res-3",
+      "from": "server",
+      "to": "browser",
+      "y": 458,
+      "label": "update ready",
+      "variant": "emphasis"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "emerald",
+      "title": "Short polling",
+      "items": [
+        "Browser asks on a fixed interval",
+        "Each request returns immediately, ready or not",
+        "Most requests return nothing new, wasting round trips"
+      ]
+    }
+  ]
+}

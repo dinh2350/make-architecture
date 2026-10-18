@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "a891d140-fd9f-4718-8bda-eed24142f3ba",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/Users/devinnguyen/Documents/project/archify/.archify/architecture-load-balancer-portrait-series-20260930-142250/0-overview/candidate.json",
+  "output": "/Users/devinnguyen/Documents/project/archify/.archify/architecture-load-balancer-portrait-series-20260930-142250/0-overview/0-overview.html",
+  "specification": {
+    "sha256": "13b44c4ce8c7c8f059c77c0f5dcf9f7ec3544e2876f877910a15df450f479c72",
+    "bytes": 3670
+  },
+  "artifact": {
+    "sha256": "f640f62563778226098721402a489d482486c28ce9a34d0942f914db50bc4396",
+    "bytes": 773681
+  }
+}

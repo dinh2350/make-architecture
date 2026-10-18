@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "diagram_type": "sequence",
+  "meta": {
+    "title": "WebSocket",
+    "output": "websocket.html",
+    "viewBox": [
+      1200,
+      760
+    ],
+    "animation": "trace",
+    "quality_profile": "showcase",
+    "column_fit": "spread",
+    "node_icon_layout": "stacked"
+  },
+  "participants": [
+    {
+      "id": "browser",
+      "type": "frontend",
+      "label": "Browser"
+    },
+    {
+      "id": "server",
+      "type": "backend",
+      "label": "Server"
+    }
+  ],
+  "messages": [
+    {
+      "id": "open",
+      "from": "browser",
+      "to": "server",
+      "y": 200,
+      "label": "GET + Upgrade: websocket",
+      "variant": "emphasis"
+    },
+    {
+      "id": "ack",
+      "from": "server",
+      "to": "browser",
+      "y": 250,
+      "label": "101 Switching Protocols",
+      "variant": "return"
+    },
+    {
+      "id": "msg-1",
+      "from": "browser",
+      "to": "server",
+      "y": 330,
+      "label": "message",
+      "variant": "default"
+    },
+    {
+      "id": "msg-2",
+      "from": "server",
+      "to": "browser",
+      "y": 372,
+      "label": "message",
+      "variant": "default"
+    },
+    {
+      "id": "msg-3",
+      "from": "browser",
+      "to": "server",
+      "y": 430,
+      "label": "message",
+      "variant": "default"
+    },
+    {
+      "id": "msg-4",
+      "from": "server",
+      "to": "browser",
+      "y": 472,
+      "label": "message",
+      "variant": "default"
+    },
+    {
+      "id": "msg-5",
+      "from": "browser",
+      "to": "server",
+      "y": 530,
+      "label": "message",
+      "variant": "default"
+    },
+    {
+      "id": "msg-6",
+      "from": "server",
+      "to": "browser",
+      "y": 572,
+      "label": "message",
+      "variant": "default"
+    },
+    {
+      "id": "msg-7",
+      "from": "browser",
+      "to": "server",
+      "y": 630,
+      "label": "message",
+      "variant": "default"
+    }
+  ]
+}

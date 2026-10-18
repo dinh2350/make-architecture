@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "receiptId": "0d89d964-91c1-47b6-97ce-c36d9f2621e9",
+  "status": "current",
+  "command": "deliver",
+  "type": "architecture",
+  "input": "/Users/devinnguyen/Documents/project/archify/.archify/architecture-load-balancer-portrait-series-20260930-142250/1-routing/candidate.json",
+  "output": "/Users/devinnguyen/Documents/project/archify/.archify/architecture-load-balancer-portrait-series-20260930-142250/1-routing/1-routing.html",
+  "specification": {
+    "sha256": "f1422d5be87044b539fb9ebfe47536505a51da8e6c1b08f2efe214eaa4705be8",
+    "bytes": 2528
+  },
+  "artifact": {
+    "sha256": "a1d1aa735db7aa1adbf8eae62f18f5f69c7a6993ccf5b9dda4f19c5589e76288",
+    "bytes": 768224
+  }
+}

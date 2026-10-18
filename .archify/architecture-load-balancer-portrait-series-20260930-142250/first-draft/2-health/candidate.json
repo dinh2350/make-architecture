@@ -1,0 +1,141 @@
+{
+ "schema_version": 1,
+ "diagram_type": "architecture",
+ "meta": {
+  "title": "Health Checks and Failover",
+  "subtitle": "Unhealthy servers get no traffic",
+  "output": "2-health.html",
+  "quality_profile": "showcase",
+  "animation": "trace",
+  "viewBox": [
+   400,
+   711
+  ]
+ },
+ "components": [
+  {
+   "id": "lb",
+   "type": "cloud",
+   "label": "Load Balancer",
+   "sublabel": "Layer 7 · HTTPS :443",
+   "pos": [
+    95,
+    40
+   ],
+   "size": [
+    210,
+    110
+   ],
+   "tile": true,
+   "note": "Terminates inbound HTTPS, routes each request by platform, skips unhealthy instances and keeps returning users on the same server."
+  },
+  {
+   "id": "health",
+   "type": "security",
+   "label": "Health Checker",
+   "sublabel": "probes every instance",
+   "pos": [
+    225,
+    270
+   ],
+   "size": [
+    160,
+    100
+   ],
+   "tile": true,
+   "note": "Probes every backend instance. An instance that fails its probe is excluded from routing until it passes again."
+  },
+  {
+   "id": "a1",
+   "type": "backend",
+   "label": "Instance A1",
+   "sublabel": "Zone A · healthy",
+   "pos": [
+    20,
+    500
+   ],
+   "size": [
+    110,
+    100
+   ],
+   "tile": true,
+   "note": "Healthy instance in Zone A, receiving traffic.",
+   "icon": "messagebus"
+  },
+  {
+   "id": "a2",
+   "type": "backend",
+   "label": "Instance A2",
+   "sublabel": "Zone A · healthy",
+   "pos": [
+    145,
+    500
+   ],
+   "size": [
+    110,
+    100
+   ],
+   "tile": true,
+   "note": "Healthy instance in Zone A, receiving traffic.",
+   "icon": "messagebus"
+  },
+  {
+   "id": "a3",
+   "type": "backend",
+   "label": "Instance A3",
+   "sublabel": "Zone A · unhealthy",
+   "pos": [
+    270,
+    500
+   ],
+   "size": [
+    110,
+    100
+   ],
+   "tile": true,
+   "note": "Failed its last health probe. Excluded from rotation, so no traffic reaches it.",
+   "icon": "messagebus"
+  }
+ ],
+ "connections": [
+  {
+   "id": "lb-health",
+   "from": "lb",
+   "to": "health",
+   "label": "consult status"
+  },
+  {
+   "id": "lb-a1",
+   "from": "lb",
+   "to": "a1"
+  },
+  {
+   "id": "lb-a2",
+   "from": "lb",
+   "to": "a2"
+  },
+  {
+   "id": "health-a3",
+   "from": "health",
+   "to": "a3",
+   "label": "probe fails",
+   "variant": "dashed"
+  }
+ ],
+ "cards": [
+  {
+   "dot": "emerald",
+   "title": "Health checks",
+   "items": [
+    "The load balancer only routes to instances that report healthy."
+   ]
+  },
+  {
+   "dot": "cyan",
+   "title": "Failure handling",
+   "items": [
+    "A3 failed its probe, so traffic is redirected to A1 and A2 and the service stays available."
+   ]
+  }
+ ]
+}

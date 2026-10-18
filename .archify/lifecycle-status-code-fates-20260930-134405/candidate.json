@@ -1,0 +1,31 @@
+{
+  "schema_version": 2,
+  "diagram_type": "lifecycle",
+  "meta": {
+    "title": "Bốn kết cục của một status code tự đặt",
+    "output": "fates.html",
+    "animation": "trace",
+    "quality_profile": "showcase"
+  },
+  "lanes": [
+    { "id": "main", "label": "Được chuẩn hoá" },
+    { "id": "replaced", "label": "Bị thay thế" },
+    { "id": "joke", "label": "Giữ lại vì đùa" },
+    { "id": "terminal", "label": "Ngoài chuẩn" }
+  ],
+  "states": [
+    { "id": "custom", "type": "start", "label": "Status code tự đặt", "sublabel": "ai cũng gửi được", "lane": "main", "col": 0, "tag": "3 chữ số" },
+    { "id": "iana", "type": "decision", "label": "IANA Registry", "sublabel": "danh sách chính thức", "lane": "main", "col": 1, "tag": "registry" },
+    { "id": "standard", "type": "success", "label": "Chuẩn hoá", "sublabel": "451 · RFC 7725", "lane": "main", "col": 3, "tag": "2016" },
+    { "id": "replaced", "type": "active", "label": "Bị thay bằng bản chuẩn", "sublabel": "420 → 429 · RFC 6585", "lane": "replaced", "col": 3, "tag": "2012" },
+    { "id": "joke", "type": "waiting", "label": "Giữ lại vì là trò đùa", "sublabel": "418 · RFC 9110 Unused", "lane": "joke", "col": 3, "tag": "reserved" },
+    { "id": "unofficial", "type": "neutral", "label": "Chưa bao giờ chính thức", "sublabel": "218 · 530 · unassigned", "lane": "terminal", "col": 3, "tag": "unassigned" }
+  ],
+  "transitions": [
+    { "from": "custom", "to": "iana" },
+    { "from": "iana", "to": "standard", "label": "được đăng ký", "variant": "emphasis" },
+    { "from": "iana", "to": "replaced", "label": "bị thay" },
+    { "from": "iana", "to": "joke", "label": "Unused" },
+    { "from": "iana", "to": "unofficial", "label": "không có tên", "variant": "dashed" }
+  ]
+}

@@ -7,6 +7,12 @@
       "type": "string",
       "pattern": "^[a-zA-Z][a-zA-Z0-9_-]*$"
     },
+    "nodeNote": {
+      "description": "Free-text explanation of this node shown in the Viewer's Semantic Passport in place of the authored-reach upstream/downstream counts. One to two sentences; keep longer evidence in a card instead.",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 400
+    },
     "locale": {
       "type": "string",
       "pattern": "^[a-z]{2,3}(-[A-Za-z0-9]{2,8})*$",
@@ -91,7 +97,7 @@
           "additionalProperties": false,
           "required": ["url", "sha256"],
           "properties": {
-            "url": { "type": "string", "minLength": 8, "maxLength": 2048, "pattern": "^https?://" },
+            "url": { "type": "string", "minLength": 8, "maxLength": 3000000, "pattern": "^(https?://|data:)" },
             "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
           }
         }
@@ -99,6 +105,10 @@
     },
     "variant": {
       "enum": ["default", "emphasis", "security", "dashed"]
+    },
+    "nodeIconLayout": {
+      "description": "Node icon presentation. Omit this field or use corner for the stable small top-left sigil. Use stacked for a large centered sigil with the label beneath it; a box too short for the stacked stack, or a node with a resolved brand mark, silently falls back to corner instead of failing validation.",
+      "enum": ["corner", "stacked"]
     },
     "legendMode": {
       "enum": ["auto", "all", "hidden"]
